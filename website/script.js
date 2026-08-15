@@ -1,5 +1,5 @@
 console.log("JavaScript is working!");
-fetch("results.json")
+fetch("website/results.json")
     .then(response => response.json())
     .then(dcfData => {
         const tableBody = document.getElementById("dcfTable");
