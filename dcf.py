@@ -1,10 +1,13 @@
 import pandas as pd
+import yfinance as yf
 overview = pd.read_excel("data/companies.xlsx", sheet_name="Overview")
 companies = overview["Ticker"].tolist()
 results = []
 
 for company in companies: 
     df = pd.read_excel("data/companies.xlsx", sheet_name=company)
+    ticker = yf.Ticker(company)
+    currentPrice = ticker.fast_info["last_price"]
 
     # In the line below, iloc[0] is needed to so the value extracted is singular instead of a series
     MarketCap = float(overview.loc[overview["Ticker"] == company, "MarketCap"].iloc[0])
@@ -25,10 +28,21 @@ for company in companies:
         futureDCFs.append(float(round(dcf, 2)))
 
     futureMarketCap = MarketCap + sum(futureDCFs)
-    futureStockPrice = futureMarketCap / df["SharesOut"].iloc[-1]
+    futurePrice = futureMarketCap / df["SharesOut"].iloc[-1]
+
+    upside = (futurePrice - currentPrice) / currentPrice * 100
+
     results.append({
-        "Ticker": company,
-        "futureStockPrice": float(round(futureStockPrice, 2))
+        "ticker": company,
+        "currentPrice": float(round(currentPrice, 2)),
+        "futurePrice": float(round(futurePrice, 2)),
+        "upside": float(round(upside, 2))
     })
 
 print(*results, sep="\n")
+
+import json
+
+with open("website/results.json", "w") as f:
+    json.dump(results, f, indent=4)
+print("Results written to website/results.json")

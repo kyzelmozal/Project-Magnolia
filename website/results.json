@@ -1,0 +1,56 @@
+[
+    {
+        "ticker": "HWM",
+        "currentPrice": 289.18,
+        "futurePrice": 295.15,
+        "upside": 2.06
+    },
+    {
+        "ticker": "KNSL",
+        "currentPrice": 379.19,
+        "futurePrice": 551.44,
+        "upside": 45.43
+    },
+    {
+        "ticker": "FIX",
+        "currentPrice": 1774.06,
+        "futurePrice": 1943.08,
+        "upside": 9.53
+    },
+    {
+        "ticker": "MU",
+        "currentPrice": 971.66,
+        "futurePrice": 799.55,
+        "upside": -17.71
+    },
+    {
+        "ticker": "NBIS",
+        "currentPrice": 277.68,
+        "futurePrice": 203.63,
+        "upside": -26.67
+    },
+    {
+        "ticker": "MG",
+        "currentPrice": 18.1,
+        "futurePrice": 2.02,
+        "upside": -88.82
+    },
+    {
+        "ticker": "RGLD",
+        "currentPrice": 230.68,
+        "futurePrice": 228.15,
+        "upside": -1.1
+    },
+    {
+        "ticker": "MPWR",
+        "currentPrice": 1402.01,
+        "futurePrice": 1447.39,
+        "upside": 3.24
+    },
+    {
+        "ticker": "ABNB",
+        "currentPrice": 184.06,
+        "futurePrice": 210.28,
+        "upside": 14.25
+    }
+]
