@@ -1,0 +1,211 @@
+[
+    {
+        "ticker": "NVDA",
+        "marketCap": 5453600.45,
+        "sharesOutstanding": 24221.0,
+        "currentPrice": 225.16,
+        "futurePrice1Y": 238.39,
+        "upside1Y": 5.87,
+        "futurePrice3Y": 427.52,
+        "upside3Y": 89.87,
+        "averageFCFGrowth": 2.65
+    },
+    {
+        "ticker": "NFLX",
+        "marketCap": 325453.54,
+        "sharesOutstanding": 4163.94,
+        "currentPrice": 78.16,
+        "futurePrice1Y": 82.74,
+        "upside1Y": 5.85,
+        "futurePrice3Y": 110.5,
+        "upside3Y": 41.38,
+        "averageFCFGrowth": 1.22
+    },
+    {
+        "ticker": "META",
+        "marketCap": 1502646.48,
+        "sharesOutstanding": 2547.51,
+        "currentPrice": 589.85,
+        "futurePrice1Y": 613.79,
+        "upside1Y": 4.06,
+        "futurePrice3Y": 687.31,
+        "upside3Y": 16.52,
+        "averageFCFGrowth": 0.45
+    },
+    {
+        "ticker": "DE",
+        "marketCap": 164351.39,
+        "sharesOutstanding": 269.94,
+        "currentPrice": 608.85,
+        "futurePrice1Y": 631.8,
+        "upside1Y": 3.77,
+        "futurePrice3Y": 760.2,
+        "upside3Y": 24.86,
+        "averageFCFGrowth": 1.11
+    },
+    {
+        "ticker": "MA",
+        "marketCap": 498703.68,
+        "sharesOutstanding": 876.01,
+        "currentPrice": 569.29,
+        "futurePrice1Y": 589.39,
+        "upside1Y": 3.53,
+        "futurePrice3Y": 633.99,
+        "upside3Y": 11.36,
+        "averageFCFGrowth": 0.18
+    },
+    {
+        "ticker": "V",
+        "marketCap": 679885.25,
+        "sharesOutstanding": 1867.05,
+        "currentPrice": 364.15,
+        "futurePrice1Y": 375.37,
+        "upside1Y": 3.08,
+        "futurePrice3Y": 396.86,
+        "upside3Y": 8.98,
+        "averageFCFGrowth": 0.07
+    },
+    {
+        "ticker": "RTX",
+        "marketCap": 300509.64,
+        "sharesOutstanding": 1347.76,
+        "currentPrice": 222.97,
+        "futurePrice1Y": 229.34,
+        "upside1Y": 2.86,
+        "futurePrice3Y": 245.15,
+        "upside3Y": 9.95,
+        "averageFCFGrowth": 0.27
+    },
+    {
+        "ticker": "ISRG",
+        "marketCap": 141344.27,
+        "sharesOutstanding": 358.28,
+        "currentPrice": 394.51,
+        "futurePrice1Y": 403.85,
+        "upside1Y": 2.37,
+        "futurePrice3Y": 433.22,
+        "upside3Y": 9.81,
+        "averageFCFGrowth": 0.48
+    },
+    {
+        "ticker": "LLY",
+        "marketCap": 1052397.57,
+        "sharesOutstanding": 891.74,
+        "currentPrice": 1180.16,
+        "futurePrice1Y": 1207.7,
+        "upside1Y": 2.33,
+        "futurePrice3Y": 1788.15,
+        "upside3Y": 51.52,
+        "averageFCFGrowth": 3.53
+    },
+    {
+        "ticker": "COST",
+        "marketCap": 426227.47,
+        "sharesOutstanding": 443.48,
+        "currentPrice": 961.1,
+        "futurePrice1Y": 983.01,
+        "upside1Y": 2.28,
+        "futurePrice3Y": 1043.86,
+        "upside3Y": 8.61,
+        "averageFCFGrowth": 0.36
+    },
+    {
+        "ticker": "CAT",
+        "marketCap": 393743.72,
+        "sharesOutstanding": 459.67,
+        "currentPrice": 856.57,
+        "futurePrice1Y": 874.46,
+        "upside1Y": 2.09,
+        "futurePrice3Y": 915.97,
+        "upside3Y": 6.93,
+        "averageFCFGrowth": 0.21
+    },
+    {
+        "ticker": "AAPL",
+        "marketCap": 4464797.38,
+        "sharesOutstanding": 14594.18,
+        "currentPrice": 305.93,
+        "futurePrice1Y": 311.86,
+        "upside1Y": 1.94,
+        "futurePrice3Y": 321.63,
+        "upside3Y": 5.13,
+        "averageFCFGrowth": -0.04
+    },
+    {
+        "ticker": "MSFT",
+        "marketCap": 3678615.19,
+        "sharesOutstanding": 7425.55,
+        "currentPrice": 495.4,
+        "futurePrice1Y": 504.0,
+        "upside1Y": 1.74,
+        "futurePrice3Y": 520.04,
+        "upside3Y": 4.97,
+        "averageFCFGrowth": 0.05
+    },
+    {
+        "ticker": "GOOGL",
+        "marketCap": 4230334.38,
+        "sharesOutstanding": 12229.93,
+        "currentPrice": 345.9,
+        "futurePrice1Y": 351.73,
+        "upside1Y": 1.69,
+        "futurePrice3Y": 362.93,
+        "upside3Y": 4.92,
+        "averageFCFGrowth": 0.07
+    },
+    {
+        "ticker": "WMT",
+        "marketCap": 917327.76,
+        "sharesOutstanding": 7958.08,
+        "currentPrice": 115.27,
+        "futurePrice1Y": 117.13,
+        "upside1Y": 1.62,
+        "futurePrice3Y": 120.82,
+        "upside3Y": 4.81,
+        "averageFCFGrowth": 0.09
+    },
+    {
+        "ticker": "AVGO",
+        "marketCap": 1869681.4,
+        "sharesOutstanding": 4757.58,
+        "currentPrice": 392.99,
+        "futurePrice1Y": 399.11,
+        "upside1Y": 1.56,
+        "futurePrice3Y": 412.87,
+        "upside3Y": 5.06,
+        "averageFCFGrowth": 0.19
+    },
+    {
+        "ticker": "HWM",
+        "marketCap": 115325.39,
+        "sharesOutstanding": 398.8,
+        "currentPrice": 289.18,
+        "futurePrice1Y": 293.7,
+        "upside1Y": 1.56,
+        "futurePrice3Y": 306.6,
+        "upside3Y": 6.02,
+        "averageFCFGrowth": 0.39
+    },
+    {
+        "ticker": "ORCL",
+        "marketCap": 433568.51,
+        "sharesOutstanding": 2880.47,
+        "currentPrice": 150.52,
+        "futurePrice1Y": 150.52,
+        "upside1Y": 0.0,
+        "futurePrice3Y": 150.52,
+        "upside3Y": 0.0,
+        "averageFCFGrowth": 0.39
+    },
+    {
+        "ticker": "AMZN",
+        "marketCap": 2833025.19,
+        "sharesOutstanding": 10786.31,
+        "currentPrice": 262.65,
+        "futurePrice1Y": 262.51,
+        "upside1Y": -0.05,
+        "futurePrice3Y": 262.53,
+        "upside3Y": -0.05,
+        "averageFCFGrowth": -1.22
+    }
+]
