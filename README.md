@@ -1,3 +1,3 @@
-# project-1
-hello
-im kyle
+Predicting stock prices and upsides!
+
+Made with Python, JS, CSS, HTML
