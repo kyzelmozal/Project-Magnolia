@@ -1,5 +1,6 @@
 import pandas as pd
 import yfinance as yf
+import sys
 results = []
 
 company = input("Enter ticker symbol: ").upper().strip()
@@ -13,6 +14,10 @@ sharesOut = ticker.fast_info["shares"] / 1000000
 
 cashflow = ticker.cashflow
 operatingCashFlow = cashflow.loc["Operating Cash Flow"] / 1000000
+
+if "Capital Expenditure" not in cashflow.index:
+    sys.exit(f"{company}: Missing Capital Expenditure")
+
 capEx = -cashflow.loc["Capital Expenditure"] / 1000000
 
 df = pd.DataFrame({

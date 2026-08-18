@@ -16,8 +16,8 @@ for company in companies:
     operatingCashFlow = cashflow.loc["Operating Cash Flow"] / 1000000
 
     if "Capital Expenditure" not in cashflow.index:
-            print(f"{company}: Missing Capital Expenditure, skipping")
-            continue
+        print(f"{company}: Missing Capital Expenditure, skipping")
+        continue
     capEx = -cashflow.loc["Capital Expenditure"] / 1000000
 
 

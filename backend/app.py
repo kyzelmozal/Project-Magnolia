@@ -1,13 +1,15 @@
 print("app.py is running")
 
 import sqlite3
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import yfinance as yf
 import pandas as pd
+import os 
 
 app = Flask(__name__)
 
-database = "magnolia.db"
+database = os.path.join(os.path.dirname(__file__), "magnolia.db")
+
 def init_database():
     # Establish the connection to the database and create picks table
     connection = sqlite3.connect(database)
@@ -22,8 +24,9 @@ def init_database():
             actual_date TEXT NOT NULL
         )
     """)
- 
 
+    # Add, remove, or alter a column for future updates
+    
     connection.commit()
     connection.close()
 
@@ -31,19 +34,20 @@ def init_database():
 
 @app.route("/")
 def home():
-    return "Magnolia backend is running!"
+    return render_template("dashboard.html")
 
 # Get ticker information
 @app.route("/api/stock/<ticker>")
 def get_stock(ticker):
 
     stock = yf.Ticker(ticker.upper())
-    info = stock.fast_info 
-    price = info["last_price"]
+    price = stock.fast_info["last_price"]
+    market_cap = stock.fast_info["market_cap"]
 
     return jsonify({
         "ticker": ticker.upper(),
-        "price": price
+        "price": price,
+        "market_cap": market_cap
     })
 
 # Add a new pick to the database
