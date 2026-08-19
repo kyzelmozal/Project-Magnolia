@@ -7,6 +7,7 @@ import pandas as pd
 import os 
 from Fcalc_margins import calc_margins
 from Ffetch_stockinfo import fetch_stockinfo 
+from Fcalc_DCF import calc_DCF
 
 app = Flask(__name__)
 
@@ -49,6 +50,12 @@ def get_margins(ticker):
     df = calc_margins(ticker)
     #Add "no gross profits "error here
     return jsonify(df.to_dict())
+
+# Get ticker's 1 and 3 year prices and upsides using DCF model
+@app.route("/api/DCF/<ticker>")
+def get_DCF(ticker):
+    return jsonify(calc_DCF(ticker))
+
 
 # Add a new pick to the database
 @app.route("/api/picks", methods=["POST"])

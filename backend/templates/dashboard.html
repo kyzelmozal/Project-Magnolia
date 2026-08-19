@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <input type="text" id="tickerInput" placeholder="Enter ticker symbol">
-    <button onclick="getStockInfo(); getStockMargins()">Get Stock Info</button>
-    <p id="result"></p>
+    <div class="gridItem" id="inputContainer">
+        <input type="text" id="tickerInput" placeholder="Ticker">
+        <div id="goButton">→</div>
+    </div>
+    <div class="gridItem"></div>
+    <div class="gridItem"></div>
+    <div class="gridItem" id="priceContainer">Price: </div>
+    <div class="gridItem" id="futurepriceContainer">Price in 1 Year: </div>
+    <div class="gridItem" id="infoContainer"></p>
+    <div class="gridItem" id="marginsContainer"></p>
 
     <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
 </body>

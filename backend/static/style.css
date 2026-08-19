@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+
+    background-color: #222225;
+    color: #F7F4F2;
+    font-family: "Satoshi", sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+
+    gap: clamp(8px, 1vw, 16px);
+    padding: clamp(8px, 1vw, 16px);
+    box-sizing: border-box
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: #222225;
+    caret-color: white;
+    color: #E1D9D1;
+    font-family: "Satoshi", sans-serif;
+    font-size: 8em;
+    width: 90%;
+    height: 100%;
+   
+}
+
+input::placeholder {
+    color: gray;
+}
+
+.gridItem{
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+}
+
+
+#goButton {
+    width: 10%;
+    color: #E1D9D1; 
+    font-size: 3rem;
+}
