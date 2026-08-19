@@ -5,6 +5,8 @@ from flask import Flask, jsonify, request, render_template
 import yfinance as yf
 import pandas as pd
 import os 
+from Fcalc_margins import calc_margins
+from Ffetch_stockinfo import fetch_stockinfo 
 
 app = Flask(__name__)
 
@@ -38,17 +40,15 @@ def home():
 
 # Get ticker information
 @app.route("/api/stock/<ticker>")
-def get_stock(ticker):
+def get_stockinfo(ticker):
+    return jsonify(fetch_stockinfo(ticker))
 
-    stock = yf.Ticker(ticker.upper())
-    price = stock.fast_info["last_price"]
-    market_cap = stock.fast_info["market_cap"]
-
-    return jsonify({
-        "ticker": ticker.upper(),
-        "price": price,
-        "market_cap": market_cap
-    })
+# Get ticker's margins
+@app.route("/api/margins/<ticker>")
+def get_margins(ticker):
+    df = calc_margins(ticker)
+    #Add "no gross profits "error here
+    return jsonify(df.to_dict())
 
 # Add a new pick to the database
 @app.route("/api/picks", methods=["POST"])
