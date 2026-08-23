@@ -14,7 +14,10 @@ def calc_DCF(company):
     operatingCashFlow = cashflow.loc["Operating Cash Flow"] / 1000000
 
     if "Capital Expenditure" not in cashflow.index:
-        sys.exit(f"{company}: Missing Capital Expenditure")
+        error = "Missing Capital Expenditure"
+        return ({
+            "error" : error
+        })
     capEx = -cashflow.loc["Capital Expenditure"] / 1000000
 
     df = pd.DataFrame({
@@ -30,13 +33,16 @@ def calc_DCF(company):
     if averageFCFGrowth > 10:
         averageFCFGrowth = df["FCFGrowth"].median()
         print(f"{company}: Average FCF Growth > 10, using median instead")
-
+        error = "Average FCF Growth > 10, using median instead"
+    
     futureFCFs = []
     if df["FCF"].iloc[-1] < 0:
         print(f"{company}: FCF is negative, company is not profitable.")
+        error = "FCF is negative, company is not profitable"
         fcf = 0
     else:
         fcf = df["FCF"].iloc[-1]
+        error = ""
     for i in range(3):
         fcf = fcf * (1 + averageFCFGrowth)
         futureFCFs.append(float(round(fcf, 2)))
@@ -59,6 +65,7 @@ def calc_DCF(company):
     futureMarketCap3Y = marketCap + sum(futureDCFs3Y)
     futurePrice3Y = futureMarketCap3Y / sharesOut
 
+    # Converted to percent because JS is buggy
     upside1Y = (futurePrice1Y - currentPrice) / currentPrice * 100
     upside3Y = (futurePrice3Y - currentPrice) / currentPrice * 100
 
@@ -69,7 +76,9 @@ def calc_DCF(company):
         "upside1Y": upside1Y, 
         "futurePrice3Y": futurePrice3Y,
         "upside3Y": upside3Y,
+        "error" : error
     })
+
 
 
 

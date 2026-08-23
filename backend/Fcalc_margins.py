@@ -9,7 +9,7 @@ def calc_margins(company):
     revenue = incomeStatement.loc["Total Revenue"] / 1000000
 
     if "Gross Profit" not in incomeStatement.index:
-        sys.exit(f"No Gross Profit for {ticker}")
+        raise ValueError(f"No Gross Profit for {ticker}")
 
     grossProfit = incomeStatement.loc["Gross Profit"] / 1000000
     netProfit = incomeStatement.loc["Net Income"] / 1000000

@@ -8,6 +8,7 @@ import os
 from Fcalc_margins import calc_margins
 from Ffetch_stockinfo import fetch_stockinfo 
 from Fcalc_DCF import calc_DCF
+from Ffetch_EPS import fetch_EPS
 
 app = Flask(__name__)
 
@@ -44,18 +45,25 @@ def home():
 def get_stockinfo(ticker):
     return jsonify(fetch_stockinfo(ticker))
 
+# Get ticker's last quarter, yearly, and 3Y EPS growth
+@app.route("/api/EPS/<ticker>")
+def get_EPS(ticker):
+    return jsonify(fetch_EPS(ticker))
+
 # Get ticker's margins
 @app.route("/api/margins/<ticker>")
 def get_margins(ticker):
-    df = calc_margins(ticker)
-    #Add "no gross profits "error here
+    try:
+        df = calc_margins(ticker)
+    except ValueError as e:
+        return{"error": str(e)}
+
     return jsonify(df.to_dict())
 
 # Get ticker's 1 and 3 year prices and upsides using DCF model
 @app.route("/api/DCF/<ticker>")
 def get_DCF(ticker):
     return jsonify(calc_DCF(ticker))
-
 
 # Add a new pick to the database
 @app.route("/api/picks", methods=["POST"])
